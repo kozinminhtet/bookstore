@@ -4,7 +4,10 @@ include('../vendor/autoload.php');
 use Books\BooksTable;
 use Books\AuthorsTable;
 use Books\CategorysTable;
+use Helpers\Auth;
 use Libs\Database\MySQL;
+
+Auth::check();
 
 $id = $_GET['id'];
 

@@ -4,7 +4,11 @@ include('../vendor/autoload.php');
 use Books\AuthorsTable;
 use Books\BooksTable;
 use Books\CategorysTable;
+use Helpers\Auth;
 use Libs\Database\MySQL;
+
+Auth::check();
+
 
 $table = new BooksTable(new MySQL);
 $authors = new AuthorsTable(new MySQL());
@@ -13,6 +17,7 @@ $category = new CategorysTable(new MySQL());
 $bookAuthor = $table->AuthorAll();
 $categories = $category->all();
 $author = $authors->all();
+
 
 
 // var_dump($books);

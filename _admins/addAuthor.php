@@ -1,3 +1,12 @@
+<?php
+include('../vendor/autoload.php');
+
+use Helpers\Auth;
+
+Auth::check();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
